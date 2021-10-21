@@ -1,0 +1,12 @@
+<h1 class="pt-4">List of Restaurants</h1>
+<div class="row d-flex flex-wrap">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-4 border">
+      <div class="card">
+        <p><%= link_to restaurant.name, restaurant_path(restaurant)%></p>
+        <p><%= restaurant.address %></p>
+        <p><%= restaurant.category %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
